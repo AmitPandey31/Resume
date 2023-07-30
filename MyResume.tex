@@ -1,0 +1,207 @@
+\documentclass[a4paper,10.5pt]{article}
+
+%----------------------------------------------------------------------------------------
+%	FONT
+%----------------------------------------------------------------------------------------
+
+% % fontspec allows you to use TTF/OTF fonts directly
+% \usepackage{fontspec}
+% \defaultfontfeatures{Ligatures=TeX}
+
+% % modified for ShareLaTeX use
+% \setmainfont[
+% SmallCapsFont = Fontin-SmallCaps.otf,
+% BoldFont = Fontin-Bold.otf,
+% ItalicFont = Fontin-Italic.otf
+% ]
+% {Fontin.otf}
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES
+%----------------------------------------------------------------------------------------
+\usepackage{url}
+\usepackage{parskip} 	
+\usepackage[compact]{titlesec}
+%other packages for formatting
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.93]{geometry}
+
+%tabularx environment
+\usepackage{tabularx}
+
+%for lists within experience section
+\usepackage{enumitem}
+
+% centered version of 'X' col. type
+\newcolumntype{C}{>{\centering\arraybackslash}X} 
+
+%to prevent spillover of tabular into next pages
+\usepackage{supertabular}
+\usepackage{tabularx}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.4\textwidth}
+
+%custom \section
+\usepackage{titlesec}				
+\usepackage{multicol}
+\usepackage{multirow}
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{6.5pt}{6.5pt}
+
+%for publications
+\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
+
+%Setup hyperref package, and colours for links
+\usepackage[unicode, draft=false]{hyperref}
+\definecolor{linkcolour}{rgb}{0.3,0.4,0.8}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+\addbibresource{citations.bib}
+\setlength\bibitemsep{1em}
+
+%for social icons
+\usepackage{fontawesome5}
+\AtBeginDocument{%                     % this will reduce spaces between parts (above and below) of texts within a (sub)section to 0pt, for example - like between an 'eqnarray' and text
+  \setlength\abovedisplayskip{0pt}
+  \setlength\belowdisplayskip{0pt}}
+%debug page outer frames
+%\usepackage{showframe}
+
+%-----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+%	BEGIN DOCUMENT
+%----------------------------------------------------------------------------------------
+\begin{document}
+
+% non-numbered pages
+\pagestyle{empty} 
+
+%----------------------------------------------------------------------------------------
+%	TITLE
+%----------------------------------------------------------------------------------------
+
+% \begin{tabularx}{\linewidth}{ @{}X X@{} }
+% \huge{Your Name}\vspace{2pt} & \hfill \emoji{incoming-envelope} email@email.com \\
+% \raisebox{-0.05\height}\faGithub\ username \ | \
+% \raisebox{-0.00\height}\faLinkedin\ username \ | \ \raisebox{-0.05\height}\faGlobe \ mysite.com  & \hfill \emoji{calling} number
+% \end{tabularx}
+
+\begin{tabularx}{\linewidth}{@{} C @{}} 
+\Huge{AMIT PANDEY} \\ [6.5pt] 
+\textbf{New Delhi, India}\\
+\href{https://github.com/AmitPandey31}{\raisebox{-0.05\height}\faGithub\ GitHub/AmitPandey31} \ $*$ \ 
+\href{https://www.linkedin.com/in/amit-pandey-9abb52124/}
+{\raisebox{-0.05\height}\faLinkedin\ Linkedin/Amit} \ $*$ \ 
+\
+\href{mailto:ap896612@gmail.com}{\raisebox{-0.05\height}\faEnvelope \ ap896612@gmail.com} \ $*$ \
+\href{tel:+91-9643592611}{\raisebox{-0.05\height}\faMobile \ +91-9643592611} \\
+\end{tabularx} \
+%----------------------------------------------------------------------------------------
+%	ABOUT SECTION
+%----------------------------------------------------------------------------------------
+\section{About me}
+Determined and passionate aspiring \textbf{software developer} with a diverse range of interests in various different \textbf{frontend} and \textbf{backend} languages,  \textbf{responsive frameworks}, databases and best code practices. Driven to become a versatile problem-solver, blending expertise from various domains to build impactful digital innovations. 
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      \textbf{Maharaja Agrasen Institute of Technology (GGSIPU)   Delhi, India} & \hfill \textbf{Graduating August, 2024}\\ [3.75pt]
+% \textbf{B.Tech in Electrical and Electronics Engineering} 
+B.Tech in Electrical and Electronics Engineering & \hfill \textbf{CGPA : 9.3/10.0} \\
+
+  \textbf{Kendriya Vidyalaya No - 3, Delhi, India} & \hfill \textbf \\
+Class XII, (PCM + CS) & \hfill \textbf{CGPA : 8.31/10.0} \\
+Class X & \hfill \textbf{CGPA : 10.0/10.0}  
+  \resumeSubHeadingListEnd
+ \
+%----------------------------------------------------------------------------------------
+%	PROJECTS SECTION
+%----------------------------------------------------------------------------------------
+  \section{Projects}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Portfolio Site } & \hfill \href{https://github.com/AmitPandey31/PortfolioSite}{\raisebox{-0.05\height}\faGithub\ Code} $|$ \href{https://amitpandey-portfolio.netlify.app/}{\raisebox{-0.05\height}\faLink\ Link}\ \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+        \item[--]Built a personal portfolio website, equipped with a user-friendly interface showcasing a collection of diverse \textbf{projects}, highlighting my skills and passion as a software developer.  Each equipped with detailed \textbf{descriptions}, \textbf{live} demos, and \textbf{GitHub} links for easy access to the codebase.
+         \item[--] Tech Stack :  \textbf{React.js, SCSS, HTML, JavaScript, Sanity, Framer Motion }
+    \end{itemize}
+    \end{minipage}
+    }
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{E-Store} & \hfill \href{https://github.com/AmitPandey31/E-Store}{\raisebox{-0.05\height}\faGithub\ Code} $|$ \href{https://e-store-mocha.vercel.app/}{\raisebox{-0.05\height}\faLink\ Link}\ \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+        \item[--] A seamless shopping platform with secure \textbf{card payment} integration, easy "add to cart" functionality, and a user-friendly interface, providing customers with a delightful online shopping experience. The Owner can \textbf{edit} the \textbf{content} of the site easily with the help of Sanity.io
+        \item[--] Tech Stack :  \textbf{HTML, CSS, JavaScript, React.js, Next.js, Sanity}
+    \end{itemize}
+    \end{minipage}
+    }
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Social} & \hfill \href{https://github.com/AmitPandey31/Social}{\raisebox{-0.05\height}\faGithub\ Code} $|$ \href{https://mern-socialapp.netlify.app/}{\raisebox{-0.05\height}\faLink\ Link}\ \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+        \item[--] Social is a fully responsive Full Stack social media web application, with the security of \textbf{user authentication}, effortless login and registration, and the comfort of a \textbf{dark mode} interface.
+        \item[--] Engage with interactive features like liking, commenting, and connecting with friends, all presented in a \textbf{clean} and intuitive UI that elevates your social media experience to new heights.
+         \item[--] Tech Stack :  \textbf{React.js, Node.js, Express, MongoDB, HTML, CSS, MUI}
+    \end{itemize}
+    \end{minipage}
+    }
+\end{tabularx}
+ \\
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+% Skills
+%----------------------------------------------------------------------------------------
+\section{Skills}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+\textbf{Languages}& \textbf{:}  \normalsize{C/C++, Python, JavsScript, SQL.}\\
+\textbf{Frameworks}& \textbf{:} \normalsize{React.js, Express, Node.js, MongoDB, jQuery, Bootstrap.}\\  
+\textbf{Tools}& \textbf{:} \normalsize{VS Code, Git/GitHub, CLI, Postman.}\\ 
+\textbf{Technical Skills}& \textbf{:} \normalsize{Data Structures and Algorithms, Object Oriented Programming, DBMS.}
+\end{tabularx}
+%--------------------------------------------------------------------------------------
+\section{CourseWork}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+          \item[--] Mastering \textbf{\href{https://udemy-certificate.s3.amazonaws.com/pdf/UC-0f3ebc1a-da1a-42f6-9a64-6d3c787db55c.pdf}{\raisebox{-0.05\height}\ Data Structures and Algorithms}} using C and C++ by Abdul Bari. 
+          \item[--] The Complete \textbf{\href{https://udemy-certificate.s3.amazonaws.com/pdf/UC-5f36e9c4-ba32-45f2-b780-dfeb815082b5.pdf}{\raisebox{-0.05\height}\ Web Development Bootcamp}} by Dr.Angela Yu. 
+          \item[--] Completed GDSC \textbf{GCCP}(Google Cloud Career Practioners) Program. \hfill \textbf{\href{https://www.cloudskillsboost.google/public_profiles/7779a7be-9b95-41bd-a6e7-ed6db9792010}{\raisebox{-0.05\height}\ Google Cloud Profile}}
+          \item[--] Successfully completed an  \textbf{\href{https://github.com/AmitPandey31/PythonCourse}{\raisebox{-0.05\height}\ IIT-Certified Python}} course, endorsed by the \textbf{Gov of India}.
+          
+    \end{itemize}
+    \end{minipage}
+}
+\end{tabularx} \\
+%----------------------------------------------------------------------------------------
+\section{Achievements / Profiles}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+         \item[--] Solved Over 450+ problems on\textbf{\href{https://leetcode.com/AmitPandey31/}{\raisebox{-0.05\height}\ LeetCode}}.
+          \item[--] Participated in \textbf{Smart India Hackathon}(SIH). Built an AI-Chatbot using Python and NLP. 
+          \item[--] Have a rating of 1500+ on\textbf{\href{https://www.codechef.com/users/amitto}{\raisebox{-0.05\height}\ Codechef}}.
+          \item[--] Coding Profile\textbf{\href{https://codeforces.com/profile/Amitto}
+          {\raisebox{-0.05\height}\ Codeforces}}.
+    \end{itemize}
+    \end{minipage}
+}
+\end{tabularx}
+
+\end{document}
